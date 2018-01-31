@@ -1,0 +1,298 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	background-color:#2e2e2e;
+	color:#555559;
+}
+a{
+	color: inherit;
+	text-decoration: inherit;
+}
+
+
+
+
+/*Grid*/
+#grid{
+	max-width:1410px;
+	text-align:center;
+	margin:0 auto;
+	background-color:#ffffff;
+	display:grid;
+	grid-template-columns: repeat(2 1fr);
+	grid-template-areas:
+		"nav nav"
+		"header header"
+		"call call"
+		"beef-img beef-img"
+		"beef-info beef-info"
+		"vegan-img vegan-img"
+		"vegan-info vegan-info"
+		"veg-img veg-img"
+		"veg-info veg-info"
+		"footer footer";
+}
+
+
+
+
+/*Header*/
+header{
+	grid-area:header;
+	line-height:0px;
+}
+.overlay{
+	position:relative;
+}
+.social-media{
+	position:absolute;
+	top:15px;
+	right:25px;
+	font-size:1em;
+	color:#fff;
+	border:solid 1px rgba(0,0,0,0);
+	border-radius:6px;
+	padding:6px 12px 6px 12px;
+	transition: all 500ms ease;
+}
+.social-media>*{
+	display:inline-block;
+}
+.social-media:hover{
+	cursor:pointer;
+	border:solid 1px #fff;
+}
+header div img{
+	display:block;
+	width:100%;
+}
+
+
+
+
+
+/*Navigation*/
+nav{
+	grid-area:nav;
+	height:60px;
+	background-color:#ffffff;	
+}
+.nav-list{
+	display:none;
+	text-align:center;
+}
+.nav-list> a {
+	padding:0px 10px 0px 10px;
+	font-weight:600;
+	transition:all 500ms ease;
+	position: relative;
+
+}
+.nav-list> a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #828285;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.nav-list> a:hover:before {
+	visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+nav > span{
+	font-size:2em;
+}
+.nav-btn{
+	text-align:right;
+	font-size:2em;
+	padding-right:10px;
+}
+.v-center{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.mobile-nav{
+	line-height:2em;
+	padding-bottom:20px;
+}
+
+
+
+
+/*call-to-action*/
+#call-to-action{
+	grid-area:call;
+	background-color:#efefef;
+	text-align:center;
+	height:500px;
+}
+#call-to-action > div{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+#call-to-action div h1{
+	margin-bottom:40px;
+	font-weight:300;
+	font-size:3em;
+}
+#call-to-action div button{
+	background: none;
+    border: 0;
+	padding:15px 20px 15px 20px;
+	background-color:#286782;
+	color:#ffffff;
+	border:solid 2px #286782;
+	border-radius:5px;
+	transition:all 500ms ease;
+}
+#call-to-action div button:hover{
+	background-color:#efefef;
+	color:#286782;
+}
+#call-to-action div img{
+	max-width:80px;
+}
+
+
+
+
+/*Menu items*/
+#beef-info{
+	grid-area:beef-info;
+	text-align:left;
+	min-height:200px;
+}
+#beef-img{
+	grid-area:beef-img;
+	overflow: hidden;
+}
+#vegan-img{
+	grid-area:vegan-img;
+}
+#vegan-info{
+	grid-area:vegan-info;
+	min-height:200px;
+	text-align:left;
+}
+#veg-info{
+	grid-area:veg-info;
+	min-height:200px;
+	text-align:left;
+}
+#veg-img{
+	grid-area:veg-img;
+}
+.crop-box{
+	overflow:hidden;
+	height:150px;
+	position:relative;
+}
+.crop-box > img{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.resp-img{
+	width:100%;
+	display:block;
+}
+
+#beef-info div h1,#vegan-info div h1,#veg-info div h1{
+	font-size:1.2em;
+	margin-bottom:20px;
+	color:#2e2e2e;
+}
+#beef-info div p,#vegan-info div p,#veg-info div p{
+	font-size:0.8em;
+}
+.info-wrapper{
+	margin:20px 15px 0px 80px;
+	position:relative;
+}
+.line{
+	position: absolute;
+	top:13px;
+	left:-40px;
+	width:30px;
+	border-top:solid 4px #286782;
+}
+
+
+
+
+/*Footer*/
+footer{
+	grid-area:footer;
+	background-color:#efefef;
+	min-height:40px;
+	padding:20px 10px 0px 10px;
+	font-size:0.8em;
+}
+.left{
+	width:33.3%;
+	text-align:left;
+	float:left;
+}
+
+.right{
+	width:66.6%;
+	text-align:right;
+	float:left;
+}
+
+
+
+
+@media only screen and (min-width : 760px) {
+	.social-media{
+		font-size:1.5em;
+	}
+	.nav-btn{
+		display:none;
+	}
+	.nav-list{
+		display:block !important;
+	}
+	nav div{
+		display:block;
+	}
+	#grid{
+		grid-template-areas:
+		"header header"
+		"nav nav"
+		"call call"
+		"beef-info beef-img"
+		"vegan-img vegan-info"
+		"veg-info veg-img"
+		"footer footer";
+	}
+	.info-wrapper{
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		margin:0px 15px 0px 100px;
+	}
+	.crop-box{
+		overflow: initial;
+		height:100% ;
+	}
+	.crop-box > img{
+		position: static;
+		top: 0;
+		transform: translateY(0);
+	}
+}

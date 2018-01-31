@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet"> -->
+	<style>
+		*{
+			margin:0 ;
+			padding:0;
+		}
+		.container{
+			margin:10px 20px 0px 20px;
+		}
+		.row{
+			width:100%;
+			height:auto;
+			display:block;
+			text-align: center;
+			
+		}
+		.col{
+			width:50%;
+			float:left;
+			display:inline-block;
+			text-align: center;
+		}
+		.cell{
+			max-width:50vw;
+			min-width:300px;
+			height:40vh;
+			margin:1%;
+			border-radius: 20px;	
+			border:solid 3px #cccccc;
+		}
+		.cell > h1{
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+			font-size: 4em;
+			font-family: 'Open Sans', sans-serif;
+			color:#dddddd;
+		}
+		.copy{
+			text-decoration: none;
+			color:inherit;
+		}
+		@media only screen and (max-width: 720px) {
+			.col{
+				width:100%;
+			}
+			.cell{
+				max-width:100vw;
+				height:20vh;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div class="cell" style="background-color:#2e2e2e;"><h1>#2e2e2e</h1></div>
+			</div>
+			<div class="col">
+				<div class="cell" style="background-color:#555559;"><h1>#555559</h1></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<div class="cell" style="background-color:#828285;"><h1>#828285</h1></div>
+			</div>
+			<div class="col">
+				<div class="cell" style="background-color:#286782;"><h1>#286782</h1></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<div class="cell" style="background-color:#efefef;"><h1>#efefef</h1></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
