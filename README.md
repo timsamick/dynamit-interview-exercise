@@ -1,1 +1,0 @@
-# dynamit-interview-exercise
